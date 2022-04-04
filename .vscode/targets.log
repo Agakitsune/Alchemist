@@ -1,0 +1,703 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-redhat-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Sat Mar 19 23:47:22 2022
+
+# Variables
+
+# makefile (from 'Makefile', line 11)
+OBJ = $(SRC:.c=.o)
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+NO_AT_BRIDGE = 1
+# makefile (from 'Makefile', line 10)
+SRC = $(shell find src -name "*.c") main.c
+# environment
+I3SOCK = /run/user/1000/i3/ipc-socket.1356
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-67189f44-b76b-4448-8ba6-5d018fed3355.sock
+# environment
+VSCODE_CWD = /home/Raph
+# environment
+GDM_LANG = en_GB.utf8
+# default
+MAKE_COMMAND := make
+# environment
+GTK3_MODULES = xapp-gtk3-module
+# environment
+define BASH_FUNC_which%%
+() {  ( alias;
+ eval ${which_declare} ) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot "$@"
+}
+endef
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/Raph/Project/GameEngine
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+HOSTNAME = fedora
+# environment
+MAIL = /var/spool/mail/Raph
+# environment
+XDG_DATA_DIRS = /home/Raph/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/var/lib/snapd/desktop
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = false
+# automatic
+%F = $(notdir $%)
+# environment
+VSCODE_CODE_CACHE_PATH = /home/Raph/.config/Code/CachedData/899d46d82c4c95423fb7e10e68eba52050e30ba3
+# environment
+CONDA_PROMPT_MODIFIER = (base) 
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# environment
+SSH_ASKPASS = /usr/libexec/openssh/gnome-ssh-askpass
+# environment
+LANG = C
+# environment
+XAUTHORITY = /run/lightdm/Raph/xauthority
+# default
+.LOADED := 
+# default
+.INCLUDE_DIRS = /usr/include /usr/local/include /usr/include
+# makefile
+MAKEFLAGS = pqrR
+# makefile
+CURDIR := /home/Raph/Project/GameEngine
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# environment
+LESSOPEN = ||/usr/bin/lesspipe.sh %s
+# makefile (from 'Makefile', line 13)
+IFLAGS = -I ./include
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXQapVDY/agent.1356
+# default
+.SHELLFLAGS := -c
+# makefile (from 'Makefile', line 19)
+CSFMLFLAGS = -lcsfml-audio -lcsfml-network -lcsfml-window -lcsfml-graphics -lcsfml-system
+# environment
+HISTSIZE = 1000
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+XDG_SESSION_DESKTOP = i3
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"VSCode","submitURL":"appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=f480c0cd-1af3-4d4d-813c-a1cc95d0cad3&iid=f480c0cd-1af3-4d4d-813c-a1cc95d0cad3&sid=f480c0cd-1af3-4d4d-813c-a1cc95d0cad3","uploadToServer":true}
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# environment
+CONDA_SHLVL = 1
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 107107
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# environment
+CONDA_PYTHON_EXE = /home/Raph/anaconda3/bin/python
+# automatic
+*F = $(notdir $*)
+# environment
+CHROME_DESKTOP = code-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"en","availableLanguages":{},"_languagePackSupport":true}
+# environment
+BREAKPAD_DUMP_LOCATION = /home/Raph/.config/Code/exthost Crash Reports
+# default
+MAKE_HOST := x86_64-redhat-linux-gnu
+# environment
+IMSETTINGS_INTEGRATE_DESKTOP = yes
+# makefile
+SHELL = /bin/sh
+# environment
+CONDA_PREFIX = /home/Raph/anaconda3
+# default
+MAKECMDGOALS := all
+# environment
+XMODIFIERS = @im=none
+# environment
+SHLVL = 1
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+IMSETTINGS_MODULE = none
+# environment
+PATH = /home/Raph/anaconda3/bin:/home/Raph/anaconda3/condabin:/home/Raph/Downloads/idea-IC-212.5457.46/bin:/home/Raph/Desktop/minecraft-launcher:/home/Raph/Downloads/Discord:/home/Raph/scripts:/home/Raph/.local/bin:/home/Raph/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/var/lib/snapd/snap/bin
+# environment
+MOZ_GMP_PATH = /usr/lib64/mozilla/plugins/gmp-gmpopenh264/system-installed
+# default
+MAKEFILES := 
+# makefile (from 'Makefile', line 23)
+WFLAGS = -W -Wall -Werror -Wextra
+# automatic
+^F = $(notdir $^)
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?F = $(notdir $?)
+# makefile (from 'Makefile', line 27)
+NAME = alchemist
+# environment
+XDG_SEAT = seat0
+# environment
+GTK_IM_MODULE = gtk-im-context-simple
+# environment
+XDG_CURRENT_DESKTOP = i3
+# environment
+KDEDIRS = /usr
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = i3
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = i3
+# 'override' directive
+GNUMAKEFLAGS := 
+# environment
+CONDA_DEFAULT_ENV = base
+# environment
+LOGNAME = Raph
+# environment
+XDG_VTNR = 1
+# makefile
+.DEFAULT_GOAL := all
+# environment
+HISTCONTROL = ignoredups
+# environment
+EDITOR = /usr/bin/nano
+# environment
+DISPLAY = :0
+# environment
+USER = Raph
+# environment
+RUNTYPE = main
+# default
+MAKE_VERSION := 4.3
+# 'override' directive
+.SHELLSTATUS := 0
+# environment
+which_declare = declare -f
+# environment
+SSH_AGENT_PID = 1542
+# environment
+_ = /usr/bin/make
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# makefile (from 'Makefile', line 25)
+CFLAGS = $(IFLAGS) $(LFLAGS) $(WFLAGS) -ggdb
+# environment
+_CE_M = 
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/Raph
+# environment
+QT_IM_MODULE = xim
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-7d88ef12-1.63.2-main.sock
+# environment
+TERM = dumb
+# environment
+XDG_SESSION_ID = 2
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+VSCODE_CLI = 1
+# environment
+ELECTRON_NO_ATTACH_CONSOLE = 1
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm-data/Raph
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink guile load
+# makefile (from 'Makefile', line 8)
+CC = gcc
+# makefile (from 'Makefile', line 21)
+LFLAGS = $(CSFMLFLAGS) -lm -L ./lib/ -lmy
+# environment
+MY_PATH = 1
+# environment
+CONDA_EXE = /home/Raph/anaconda3/bin/conda
+# environment
+_CE_CONDA = 
+# environment
+GDMSESSION = i3
+# variable set hash-table stats:
+# Load=125/1024=12%, Rehash=0, Collisions=15/170=9%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# . (device 41, inode 3085954): 12 files, no impossibilities.
+
+# 12 files, no impossibilities in 1 directories.
+
+# Implicit Rules
+
+# No implicit rules.
+
+# Files
+
+# Not a target:
+src/engines/render/particules/atlas/boi.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.973141615
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/sprite/modifiers2.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:29.74813814
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/particules/modifiers2.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.830142257
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/world/update.o:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-03-19 14:27:49.529318516
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/world/component.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:49.23631983
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/sprite/copy.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:29.664138516
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/particules/modifiers.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.740142661
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/entity/cmp.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:48.481323216
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/const.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.289144683
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/component_manager.h/utils.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:48.920321247
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-16 18:42:35.254957751
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/renderables/constructors.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:29.929137328
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/system/constructors.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.039145804
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/constructors.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.36114436
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/system/signature.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.202145073
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/world/entity.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:49.165320148
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/component_array/modifiers.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:48.639322507
+#  File has been updated.
+#  Successfully updated.
+
+clean:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 36):
+	find -name "*.o" -delete
+
+# Not a target:
+src/engines/render/modifiers.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.444143988
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/world/const.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:49.317319466
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/particules/flame/func.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.904141925
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/renderables/observators.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:30.009136969
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/system/modifiers.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.063145697
+#  File has been updated.
+#  Successfully updated.
+
+re: fclean all
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/world/system.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:49.460318825
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/particules/observators2.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:29.111140997
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/sprite/atlas/boi.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:29.840137727
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/world/stage.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:49.622318098
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/loop.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:30.298135673
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/component_array/observators.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:48.707322202
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
+src/component_manager.h/modifiers.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:48.847321574
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/renderables/copy.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:30.080136651
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/world/entity_modifier.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:49.387319152
+#  File has been updated.
+#  Successfully updated.
+
+all: alchemist
+#  Command line target.
+#  Implicit rule search has been done.
+#  File does not exist.
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/world/constructors.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:49.069320579
+#  File has been updated.
+#  Successfully updated.
+
+fclean: clean
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 39):
+	make -C lib/ fclean
+	rm -f $(NAME)
+
+# Not a target:
+src/engines/render/sprite/observators.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:29.486139315
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/component_manager.h/constructors.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:48.777321888
+#  File has been updated.
+#  Successfully updated.
+
+alchemist: src/entity/cmp.o src/component_array/constructors.o src/component_array/modifiers.o src/component_array/observators.o src/component_manager.h/constructors.o src/component_manager.h/modifiers.o src/component_manager.h/utils.o src/component_manager.h/observators.o src/world/constructors.o src/world/entity.o src/world/component.o src/world/const.o src/world/entity_modifier.o src/world/system.o src/world/update.o src/world/stage.o src/world/copy_entity.o src/system/constructors.o src/system/modifiers.o src/system/update.o src/system/signature.o src/system/entity.o src/engines/render/const.o src/engines/render/constructors.o src/engines/render/modifiers.o src/engines/render/insert.o src/engines/render/particules/constructors.o src/engines/render/particules/observators.o src/engines/render/particules/modifiers.o src/engines/render/particules/modifiers2.o src/engines/render/particules/flame/func.o src/engines/render/particules/atlas/boi.o src/engines/render/particules/utils.o src/engines/render/particules/observators2.o src/engines/render/particules/soul_flame/func.o src/engines/render/particules/smoke/func.o src/engines/render/sprite/constructors.o src/engines/render/sprite/observators.o src/engines/render/sprite/modifiers.o src/engines/render/sprite/copy.o src/engines/render/sprite/modifiers2.o src/engines/render/sprite/atlas/boi.o src/engines/render/renderables/constructors.o src/engines/render/renderables/observators.o src/engines/render/renderables/copy.o src/engines/render/renderables/modifiers.o src/engines/render/atlas/boi.o src/engines/render/loop.o src/engines/render/observators.o main.o
+#  Implicit rule search has not been done.
+#  Last modified 2022-03-19 14:28:55.486022708
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 32):
+	make -C lib/ all
+	$(CC) -o $(NAME) $(OBJ) $(CFLAGS)
+
+# Not a target:
+main.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:50.770043859
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/particules/smoke/func.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:29.305140127
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/system/update.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.133145383
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/particules/soul_flame/func.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:29.199140602
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/system/entity.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.22514497
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/particules/constructors.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.585143356
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/insert.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.516143665
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/world/copy_entity.o:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-03-19 14:28:28.015145912
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/atlas/boi.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:30.221136018
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/component_array/constructors.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:48.56732283
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/sprite/constructors.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:29.395139723
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/component_manager.h/observators.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:27:48.988320942
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/particules/observators.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:28.655143042
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/sprite/modifiers.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:29.576138911
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/renderables/modifiers.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:30.151136333
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/observators.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:30.367135364
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+src/engines/render/particules/utils.o:
+#  Implicit rule search has been done.
+#  Last modified 2022-03-19 14:28:29.041141311
+#  File has been updated.
+#  Successfully updated.
+
+# files hash-table stats:
+# Load=58/1024=6%, Rehash=0, Collisions=2/124=2%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 1 (0) / strings = 69 / storage = 1757 B / avg = 25 B
+# current buf: size = 8162 B / used = 1757 B / count = 69 / avg = 25 B
+
+# strcache performance: lookups = 85 / hit rate = 18%
+# hash-table stats:
+# Load=69/8192=1%, Rehash=0, Collisions=0/85=0%
+# Finished Make data base on Sat Mar 19 23:47:22 2022
+
+ 
