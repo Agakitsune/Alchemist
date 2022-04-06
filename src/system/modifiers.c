@@ -11,11 +11,11 @@ bool system_add(system_t *this, entity_t entity)
 {
     if (!this)
         return false;
-    return FAST_SET_INSERT(this->entities, entity);
+    return SET_INSERT(this->entities, entity);
 }
 void system_remove(system_t *this, entity_t entity)
 {
     if (!this)
         return;
-    FAST_SET_ERASE(this->entities, entity);
+    SET_ERASE(this->entities, entity);
 }

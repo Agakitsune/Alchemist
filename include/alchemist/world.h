@@ -50,8 +50,12 @@
     (entity),\
     fnv_hash_str(#component))
 
-    #define ALCHEMIST_SYSTEM(system, ...)\
-    world_add_system(get_world(), (system), #__VA_ARGS__)
+    #define ALCHEMIST_SYSTEM(system, extra, ...)\
+    (void)(extra == NULL ? \
+    world_add_system(get_world(), \
+    system_ctor((system), NULL, 0), #__VA_ARGS__) : \
+    world_add_system(get_world(), \
+    system_ctor((system), extra, sizeof(*extra)), #__VA_ARGS__))
 
     #define ALCHEMIST_STAGE\
     world_get_stage(get_world())
@@ -67,7 +71,7 @@ typedef struct world world_t;
 struct world {
     component_manager_t c_manager;
     signature_t *signature;
-    system_t *systems;
+    system_t **systems;
     uint32_t *deleted_entities;
     uint8_t stage;
 };
@@ -90,7 +94,7 @@ bool world_set_component(world_t *this,
 void *world_get_component(world_t *this, entity_t entity, hash_t component);
 
 bool world_add_system(world_t *this,
-                    void (*func)(entity_t entity),
+                    system_t *system,
                     const char *str);
 
 uint8_t world_get_stage(world_t *this);

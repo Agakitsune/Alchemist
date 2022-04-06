@@ -45,7 +45,7 @@
     (entity) = ((entity_t)(entity)) | (((entity_t)(status) & UINT8_MAX))
 
     #define ENTITY_IS_STATUS(entity, status)\
-    ((ENTITY_GET_STATUS(entity)) == (status)) ? true : false
+    (((ENTITY_GET_STATUS(entity)) == (status)) ? true : false)
 
 typedef uint64_t entity_t;
 

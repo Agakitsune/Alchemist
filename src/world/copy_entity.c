@@ -24,13 +24,6 @@ static bool copy_component(world_t *this, entity_t base, entity_t copy)
     return true;
 }
 
-static bool copy_sprite(entity_t base, entity_t copy)
-{
-    sprite_t *tmp = render_engine_get_sprite(get_render_engine(), base);
-
-    return render_engine_add(get_render_engine(), copy, tmp);
-}
-
 entity_t world_copy_entity(world_t *this, entity_t entity, uint16_t layer)
 {
     entity_t new;
@@ -41,8 +34,6 @@ entity_t world_copy_entity(world_t *this, entity_t entity, uint16_t layer)
     if (ENTITY_IS_STATUS(new, DEAD))
         return ENTITY_NEW(0, 0, 0, DEAD);
     if (!copy_component(this, entity, new))
-        return ENTITY_NEW(0, 0, 0, DEAD);
-    if (!copy_sprite(entity, new))
         return ENTITY_NEW(0, 0, 0, DEAD);
     if (!world_system_entity(this, new))
         return ENTITY_NEW(0, 0, 0, DEAD);
