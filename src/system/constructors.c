@@ -7,21 +7,32 @@
 
 #include "alchemist/system.h"
 
-bool system_ctor(system_t *this, void (*func)(entity_t entity))
+system_t *system_ctor(void (*func)(entity_t *entity),
+                    void *extra,
+                    size_t extra_size)
 {
+    system_t *this = my_malloc(sizeof(system_t) + extra_size);
+    char *ptr = ((char *)this) + sizeof(system_t);
+
     if (!this || !func)
-        return false;
-    this->entities = FAST_SET_NEW(65536, entity_t, &entity_cmp_id);
+        return my_free(this), NULL;
+    this->entities = SET_NEW(65536, entity_t, &entity_cmp_id);
     if (!this->entities)
-        return false;
+        return my_free(this), NULL;
     this->signature = 0;
     this->system = func;
-    return true;
+    this->has_extra = false;
+    if (extra) {
+        copy_memory(ptr, extra, extra_size);
+        this->has_extra = true;
+    }
+    return this;
 }
 
 void system_dtor(system_t *this)
 {
     if (!this)
         return;
-    FAST_SET_DESTROY(this->entities);
+    SET_DESTROY(this->entities);
+    my_free(this);
 }

@@ -10,7 +10,7 @@
 
     #include "hash.h"
 
-    #include "fast_set.h"
+    #include "set.h"
     #include "vector.h"
 
     #define MAP_NEW(size, type)\

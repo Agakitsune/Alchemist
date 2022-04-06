@@ -7,23 +7,23 @@
 
 #include "c++/set.h"
 
-uint64_t search(void *this, void *value, int64_t (*cmp)(void *, void *))
+static int64_t dicho(void *this, void *value)
 {
     char *ptr = this;
-    uint64_t min = 0;
-    uint64_t max = set_last(this) + 1;
-    uint64_t mid = 0;
+    int64_t min = 0;
+    int64_t max = set_last(this);
+    int64_t mid = 0;
     int64_t res = 0;
 
-    while (min < max) {
+    while (min <= max) {
         mid = (min + max) / 2;
-        res = cmp(ptr + mid * set_data_size(this), value);
+        res = set_cmp(this)(ptr + mid * set_data_size(this), value);
         if (res == 0)
             return mid;
-        else if (res > 0)
-            max = mid;
-        else
+        if (res > 0)
             min = mid + 1;
+        else
+            max = mid - 1;
     }
     return -1;
 }
@@ -35,7 +35,7 @@ void *set_find(void *this, void *value)
 
     if (!this || !value)
         return NULL;
-    index = search(this, value, set_cmp(this));
+    index = dicho(this, value);
     if (index == UINT64_MAX)
         return NULL;
     ptr = this;

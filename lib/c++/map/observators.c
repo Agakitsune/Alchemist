@@ -16,7 +16,7 @@ void *map_find(map_t *this, const char *key)
     if (!this || !key)
         return NULL;
     hash = fnv_hash_str(key);
-    tmp = FAST_SET_FIND(this->hashes, hash);
+    tmp = SET_FIND(this->hashes, hash);
     if (!tmp)
         return NULL;
     index = (((uint64_t)tmp) - ((uint64_t)this->hashes)) / sizeof(hash_t);

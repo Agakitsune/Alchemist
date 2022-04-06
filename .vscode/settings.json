@@ -44,7 +44,9 @@
         "vector": "c",
         "render_engine.h": "c",
         "algorithm": "c",
-        "particules.h": "c"
+        "particules.h": "c",
+        "component_manager.h": "c",
+        "entity.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "git.ignoreLimitWarning": true

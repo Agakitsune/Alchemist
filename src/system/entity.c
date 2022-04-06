@@ -13,7 +13,7 @@ void system_set_status(system_t *this, entity_t entity, uint8_t status)
 
     if (!this)
         return;
-    tmp = FAST_SET_FIND(this->entities, entity);
+    tmp = SET_FIND(this->entities, entity);
     if (!tmp)
         return;
     ENTITY_SET_STATUS(*tmp, status);
@@ -25,7 +25,7 @@ void system_set_stage(system_t *this, entity_t entity, uint16_t stage)
 
     if (!this)
         return;
-    tmp = FAST_SET_FIND(this->entities, entity);
+    tmp = SET_FIND(this->entities, entity);
     if (!tmp)
         return;
     ENTITY_SET_STAGE(*tmp, stage);

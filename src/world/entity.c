@@ -37,6 +37,7 @@ entity_t world_new_entity(world_t *this, uint16_t layer)
         new_index++;
     }
     register_entity(this, entity);
+    printf("%u\n", new_index);
     return entity;
 }
 
@@ -49,7 +50,7 @@ void world_kill_entity(world_t *this, entity_t entity)
     ARRAY_ERASE(this->signature, ENTITY_GET_ID(entity));
     COMPONENT_MANAGER_REMOVE(&this->c_manager, entity);
     for (uint64_t i = 0; i < VECTOR_SIZE(this->systems); i++)
-        system_remove(&this->systems[i], entity);
+        system_remove(this->systems[i], entity);
     // render_engine_remove(&this->render_engine, entity);
 }
 
@@ -68,12 +69,12 @@ bool world_system_entity(world_t *this, entity_t entity)
     if (!this)
         return false;
     for (uint64_t i = 0; i < VECTOR_SIZE(this->systems); i++) {
-        sys_signature = this->systems[i].signature;
+        sys_signature = this->systems[i]->signature;
         if (((sys_signature & this->signature[id]) == sys_signature)) {
-            if (!system_add(&this->systems[i], entity))
+            if (!system_add(this->systems[i], entity))
                 return false;
         } else {
-            system_remove(&this->systems[i], entity);
+            system_remove(this->systems[i], entity);
         }
     }
     return true;

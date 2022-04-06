@@ -7,25 +7,25 @@
 
 #include "c++/set.h"
 
-bool set_insert(void **this, void *value)
+static int64_t dicho(void *this, void *value)
 {
-    char *ptr = NULL;
-    char *tmp = NULL;
-    uint64_t last = 0;
+    char *ptr = this;
+    int64_t min = 0;
+    int64_t max = set_last(this);
+    int64_t mid = 0;
+    int64_t res = 0;
 
-    if (!this || !value || !(*this))
-        return false;
-    last = set_last(*this);
-    if (last == (set_size(*this) - 1))
-        ASSERT(set_resize(this), "Out of Memory");
-    ptr = *this;
-    if (set_contains(*this, value))
-        return true;
-    tmp = ptr + (last + 1) * set_data_size(*this);
-    set_set_last(*this, last + 1);
-    copy_memory(tmp, value, set_data_size(*this));
-    set_sort(*this);
-    return true;
+    while (min <= max) {
+        mid = (min + max) / 2;
+        res = set_cmp(this)(ptr + mid * set_data_size(this), value);
+        if (res == 0)
+            return mid;
+        if (res > 0)
+            min = mid + 1;
+        else
+            max = mid - 1;
+    }
+    return -1;
 }
 
 void set_erase(void *this, void *value)
@@ -40,14 +40,15 @@ void set_erase(void *this, void *value)
     last = set_last(this);
     if (last == UINT64_MAX)
         return;
-    tmp = set_find(this, value);
-    if (!tmp)
+    index = dicho(this, value);
+    if (index == UINT64_MAX)
         return;
-    index = ((long)tmp - (long)this) / set_data_size(this);
-    set_swap(this, index, last);
+    tmp = ptr + index * set_data_size(this);
+    if (index != last)
+        move_memory(tmp, tmp +
+        set_data_size(this), (last - index + 1) * set_data_size(this));
     set_memory(ptr + last * set_data_size(this), 0, set_data_size(this));
     set_set_last(this, last - 1);
-    set_sort(this);
 }
 
 void set_clear(void *this)
