@@ -2,6 +2,14 @@
 
 Alchemist ECS Game Engine
 
+## Disclaimer
+Alchemist is still in development, you can use it but there is not that much documentation on it right now
+There can be crashes or speed perfomance with the Engine, if you run into any issues, speed perfomance looses, crashes, etc...
+Send an
+
+## What is Alchemist ?
+Alchemist is (not yet) a powerful ECS Engine using CPU Caches optimization and low memory for better performances
+
 # Changelog
 
 ## 1.4
